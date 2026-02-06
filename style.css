@@ -1,0 +1,150 @@
+/* Tema gelap komik */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #f00;
+}
+
+h1, h2 {
+    color: #f00;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a, nav button {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav button:hover, nav a:hover {
+    background-color: #c00;
+}
+
+/* Responsif untuk HP, tablet, desktop */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#comic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comic-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.comic-cover {
+    width: 100px;
+    height: 150px;
+    object-fit: cover; /* Sampul tetap proporsional */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comic-info {
+    flex: 1;
+}
+
+.comic-title {
+    color: #f00;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.comic-title:hover {
+    color: #c00;
+}
+
+.comic-description {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.chapter-list {
+    display: none; /* Hidden by default, toggle on click */
+    margin-top: 10px;
+    width: 100%;
+}
+
+.chapter-item {
+    background-color: #555;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chapter-item:hover {
+    background-color: #777;
+}
+
+/* Untuk HP: Stack vertikal */
+@media (max-width: 768px) {
+    .comic-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .comic-cover {
+        width: 80px;
+        height: 120px;
+    }
+}
+
+/* Halaman baca */
+#comic-images {
+    text-align: center;
+}
+
+#comic-images img {
+    max-width: 100%; /* Tidak burik, tetap proporsional */
+    height: auto; /* Untuk gambar panjang, tetap tajam */
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Form upload */
+form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}

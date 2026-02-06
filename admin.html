@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Chapter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Upload Chapter Komik</h1>
+        <nav>
+            <a href="index.html">Kembali</a>
+        </nav>
+    </header>
+    <main>
+        <form id="upload-form">
+            <label for="comic-title">Judul Komik (Pilih Existing atau Ketik Baru):</label>
+            <input type="text" id="comic-title" list="comic-list" required placeholder="Ketik judul komik...">
+            <datalist id="comic-list">
+                <!-- Options akan dimuat dari data -->
+            </datalist>
+            <div id="new-comic-fields" style="display: none;">
+                <label for="comic-cover">Sampul Komik (Upload Gambar):</label>
+                <input type="file" id="comic-cover" accept="image/*" required>
+                <label for="comic-description">Deskripsi Komik:</label>
+                <textarea id="comic-description" rows="4" placeholder="Deskripsi singkat komik..." required></textarea>
+            </div>
+            <label for="chapter-name">Nama Chapter:</label>
+            <input type="text" id="chapter-name" required>
+            <label for="images">Upload Gambar Chapter (Multiple):</label>
+            <input type="file" id="images" multiple accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
